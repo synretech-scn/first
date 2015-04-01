@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  **********************************************************************************************
+
+  此文件是由项目文件中的一个工具生成的: ServiceDefinition.csdef
+
+  对此文件的更改可能会导致不正确的行为，并且如果重新生成此文件，所做的更改将丢失。
+
+  **********************************************************************************************
+-->
+<ServiceDefinition name="ServiceBus.Cloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition" schemaVersion="2014-06.2.4">
+  <WebRole name="ServiceBus.WebApi" vmsize="Small">
+    <Sites>
+      <Site name="Web">
+        <Bindings>
+          <Binding name="Endpoint1" endpointName="Endpoint1" />
+        </Bindings>
+      </Site>
+    </Sites>
+    <Endpoints>
+      <InputEndpoint name="Endpoint1" protocol="http" port="80" />
+    </Endpoints>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.Cloud\rcf\Release\ServiceBus.WebApiContent\" />
+      </Content>
+    </Contents>
+  </WebRole>
+  <WorkerRole name="ServiceBus.Recive" vmsize="Small">
+    <ConfigurationSettings>
+      <Setting name="Microsoft.ServiceBus.ConnectionString" />
+      <Setting name="LogSqlConnectionString" />
+      <Setting name="LogQueueName" />
+      <Setting name="ThreadPerQueue" />
+      <Setting name="Start" />
+      <Setting name="LogQueueCount" />
+      <Setting name="ReceiveBatchCount" />
+      <Setting name="TestSpeed" />
+      <Setting name="UseTrigger" />
+      <Setting name="FlushDbBallsCount" />
+      <Setting name="MaxConcurrentCalls" />
+      <Setting name="TestSpeedQueueCount" />
+    </ConfigurationSettings>
+    <Contents>
+      <Content destination=".\">
+        <SourceDirectory path="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.Cloud\rcf\Release\ServiceBus.ReciveContent\" />
+      </Content>
+    </Contents>
+  </WorkerRole>
+</ServiceDefinition>

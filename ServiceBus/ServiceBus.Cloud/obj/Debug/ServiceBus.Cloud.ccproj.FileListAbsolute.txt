@@ -1,0 +1,2 @@
+D:\办公\Visual Studio 2012\ServiceBus\ServiceBus.Cloud\bin\Debug\ServiceConfiguration.cscfg
+D:\办公\Visual Studio 2012\ServiceBus\ServiceBus.Cloud\bin\Debug\ServiceDefinition.csdef

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceConfiguration serviceName="ServiceBus.Cloud" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceConfiguration" osFamily="4" osVersion="*" schemaVersion="2014-06.2.4">
+  <Role name="ServiceBus.WebApi">
+    <Instances count="1" />
+    <ConfigurationSettings />
+  </Role>
+  <Role name="ServiceBus.Recive">
+    <Instances count="1" />
+    <ConfigurationSettings>
+      <Setting name="Microsoft.ServiceBus.ConnectionString" value="Endpoint=sb://xbowling.servicebus.windows.net/;SharedSecretIssuer=owner;SharedSecretValue=WwIhL8qir1mbNsTMWFSoifZiqZPYyyYj+ZQGWI7iOnc=" />
+      <Setting name="LogSqlConnectionString" value="Data Source=xb-venue-db.cloudapp.net;Initial Catalog=venuecache;User ID=venuedb;Password=ypk7RdT334SSb8xqnnQG;Trusted_Connection=false;" />
+      <Setting name="LogQueueName" value="Logging" />
+      <Setting name="ThreadPerQueue" value="1" />
+      <Setting name="Start" value="False" />
+      <Setting name="LogQueueCount" value="1" />
+      <Setting name="ReceiveBatchCount" value="1" />
+      <Setting name="TestSpeed" value="True" />
+      <Setting name="UseTrigger" value="True" />
+      <Setting name="FlushDbBallsCount" value="100" />
+      <Setting name="MaxConcurrentCalls" value="10" />
+      <Setting name="TestSpeedQueueCount" value="5000" />
+    </ConfigurationSettings>
+  </Role>
+</ServiceConfiguration>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RoleModel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServiceBus.WebApi" version="2.5.6496.10" xmlns="http://schemas.microsoft.com/ServiceHosting/2008/10/ServiceDefinition">
+  <Runtime>
+    <EntryPoint>
+      <NetFxEntryPoint assemblyName="ServiceBus.WebApi.dll" targetFrameworkVersion="v4.0" />
+    </EntryPoint>
+  </Runtime>
+  <Properties>
+    <Property name="TargetFrameworkVersion" value="v4.5" />
+    <Property name="RoleType" value="Web" />
+    <Property name="RoleName" value="ServiceBus.WebApi" />
+    <Property name="ProjectName" value="ServiceBus.WebApi" />
+    <Property name="Configuration" value="Release" />
+    <Property name="Platform" value="AnyCPU" />
+    <Property name="SetConfiguration" value="Configuration=Release" />
+    <Property name="SetPlatform" value="Platform=AnyCPU" />
+    <Property name="RoleTargetFramework" value="v4.5" />
+    <Property name="OutputDir" value="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.Cloud\obj\Release\ServiceBus.WebApi\" />
+    <Property name="EntryPoint" value="ServiceBus.WebApi.dll" />
+    <Property name="SourceDir" value="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.WebApi\" />
+    <Property name="SitePhysicalPath" value="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.Cloud\obj\Release\ServiceBus.WebApi\" />
+    <Property name="TargetRuntimeVersion" value="v4.0" />
+  </Properties>
+  <Sites>
+    <Site name="Web" physicalDirectory="D:\资料\办公\Visual Studio 2013\Projects\ServiceBus\ServiceBus.Cloud\obj\Release\ServiceBus.WebApi\">
+      <Bindings>
+        <Binding name="Endpoint1" endpointName="Endpoint1" />
+      </Bindings>
+    </Site>
+  </Sites>
+</RoleModel>
